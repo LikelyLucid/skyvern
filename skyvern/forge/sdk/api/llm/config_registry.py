@@ -69,5 +69,5 @@ if SettingsManager.get_settings().ENABLE_AZURE:
             True,
         ),
     )
-if SettingsManager.get_settings().ENABLE_OPENAI:
+if SettingsManager.get_settings().ENABLE_OLLAMA:
     
