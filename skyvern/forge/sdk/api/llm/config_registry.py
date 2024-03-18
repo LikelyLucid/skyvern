@@ -69,5 +69,12 @@ if SettingsManager.get_settings().ENABLE_AZURE:
             True,
         ),
     )
-if SettingsManager.get_settings().ENABLE_OLLAMA:
-    
+if SettingsManager.get_settings().ENABLE_OLLAMA:(
+    LLMConfigRegistry.register_config(
+        "OLLAMA_MODEL",
+        LLMConfig(
+            f"azure/{SettingsManager.get_settings().AZURE_DEPLOYMENT}",
+            ["AZURE_DEPLOYMENT", "AZURE_API_KEY", "AZURE_API_BASE", "AZURE_API_VERSION"],
+            True,
+        ),
+        )
